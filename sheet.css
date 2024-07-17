@@ -3,7 +3,6 @@ body {
     height: 100vh;
 }
 .container {
-    border:  5px solid blue;
     height: 100vh;
     display: grid;
     grid-template-areas: 
@@ -23,16 +22,15 @@ body {
     border-radius: 8px;
 }
 .main {
-    /* border: 5px solid green; */
     grid-area: main;
     border-radius: 8px;
     background-color: #E2E8F0;
 }
 .aside {
-    /* border: 5px solid orange; */
     grid-area: aside;
     border-radius: 8px;
     background-color: #E2E8F0;
+    padding: 24px;
 }
 
 /* Side-bar */
@@ -299,4 +297,43 @@ body {
 }
 .trending {
     margin-top: 24px;
+}
+
+/*  Main */
+.main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    height: auto;
+    overflow: auto;
+    gap: 24px;
+    padding: 24px;
+}
+
+.main > div {
+    display: grid;
+    padding: 24px;
+    background-color: #FFFFFF;
+    border-left: 15px solid yellow;
+    border-radius: 20px;
+    box-shadow:
+    0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075),
+    0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075),
+    0 16px 16px hsl(0deg 0% 0% / 0.075);
+}
+.main > div > h2 {
+    margin: 0;
+    font-size: 32px;
+}
+.main > div > div {
+    justify-self: end;
+}
+.main > div > p {
+    font-size: 18px;
+    margin-top: 8px;
+}
+.main > div > div > img {
+    margin-right: 8px;
+    margin-top: 8%;
 }
